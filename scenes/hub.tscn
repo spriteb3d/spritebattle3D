@@ -1,0 +1,125 @@
+[gd_scene load_steps=3 format=3 uid="uid://djuyylyfmi04g"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_hcxm3"]
+height = 1.8
+
+[sub_resource type="PrismMesh" id="PrismMesh_qssp3"]
+size = Vector3(8.635, 2.63, 11)
+
+[node name="Hub" type="Node3D"]
+
+[node name="Ground" type="CSGBox3D" parent="."]
+size = Vector3(64, 0.001, 64)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.3799667, 0.9685098, 4.3121214)
+mesh = SubResource("CapsuleMesh_hcxm3")
+
+[node name="House" type="Node3D" parent="."]
+transform = Transform3D(0.33323094, 0, -0.9428452, 0, 1, 0, 0.9428452, 0, 0.33323094, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="House2" type="Node3D" parent="."]
+transform = Transform3D(-0.43779072, 0, -0.89907694, 0, 1, 0, 0.89907694, 0, -0.43779072, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House2"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House2/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House2/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="House3" type="Node3D" parent="."]
+transform = Transform3D(0.84787226, 0, -0.53020054, 0, 1, 0, 0.53020054, 0, 0.84787226, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House3"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House3/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House3/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="House4" type="Node3D" parent="."]
+transform = Transform3D(0.1762774, 0, 0.9843405, 0, 1, 0, -0.9843405, 0, 0.1762774, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House4"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House4/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House4/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="House5" type="Node3D" parent="."]
+transform = Transform3D(0.82492614, 0, 0.56524044, 0, 1, 0, -0.56524044, 0, 0.82492614, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House5"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House5/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House5/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="House6" type="Node3D" parent="."]
+transform = Transform3D(-0.475056, 0, 0.87995565, 0, 1, 0, -0.87995565, 0, -0.475056, 0, 0, 0)
+
+[node name="CSGCombiner" type="CSGCombiner3D" parent="House6"]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="House6/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.53055406, 22.724224)
+size = Vector3(8, 12, 10)
+
+[node name="CSGMesh3D" type="CSGMesh3D" parent="House6/CSGCombiner"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.6832085, 22.618374)
+mesh = SubResource("PrismMesh_qssp3")
+
+[node name="Fountain" type="CSGCombiner3D" parent="."]
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.17659542, 0)
+radius = 6.0
+height = 0.4
+
+[node name="CSGCylinder3D2" type="CSGCylinder3D" parent="Fountain/CSGCylinder3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.22130954, 0)
+operation = 2
+radius = 5.8
+height = 0.4
+
+[node name="CSGCylinder3D3" type="CSGCylinder3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39790496, 0)
+radius = 2.0
+height = 1.37
+
+[node name="CSGCylinder3D4" type="CSGCylinder3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.39790496, 0)
+radius = 1.5
+height = 2.368
+
+[node name="CSGCylinder3D5" type="CSGCylinder3D" parent="Fountain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.7008759, 0)
+radius = 0.757
+height = 2.368
+
+[node name="CSGTorus3D" type="CSGTorus3D" parent="Fountain"]
+transform = Transform3D(0.70154387, 0.5500619, -0.45306528, 0, 0.6357684, 0.77187985, 0.7126263, -0.5415076, 0.44601944, 0, 3.8015811, 0)
