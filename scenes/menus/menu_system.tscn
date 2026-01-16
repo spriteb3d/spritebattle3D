@@ -1,0 +1,190 @@
+[gd_scene load_steps=9 format=3 uid="uid://ntopxs8eoxbj"]
+
+[ext_resource type="Script" uid="uid://d172qiiofbpgi" path="res://scripts/menu system/game_menu.gd" id="1_6qhf6"]
+[ext_resource type="Script" uid="uid://xd6ea5xrdr1o" path="res://scripts/menu system/menus/main_menu.gd" id="2_sdvdd"]
+[ext_resource type="Texture2D" uid="uid://injvyogoo7am" path="res://textures/title_brawler.png" id="3_sdvdd"]
+[ext_resource type="Theme" uid="uid://keakgw8nsn7" path="res://misc/menu_theme.tres" id="4_a8paj"]
+[ext_resource type="Script" uid="uid://bcmmeuwye5k84" path="res://scripts/menu system/menus/game_selection.gd" id="5_vwgyn"]
+[ext_resource type="Script" uid="uid://dpcqgytq43lps" path="res://scripts/menu system/menus/in_game.gd" id="6_a8paj"]
+[ext_resource type="Script" uid="uid://bvxpq6q7h0qk4" path="res://scripts/menu system/menus/pause.gd" id="7_a8paj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a8paj"]
+
+[node name="MenuSystem" type="TabContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_a8paj")
+current_tab = 0
+tabs_visible = false
+script = ExtResource("1_6qhf6")
+
+[node name="MainMenu" type="Control" parent="."]
+layout_mode = 2
+script = ExtResource("2_sdvdd")
+metadata/_tab_index = 0
+
+[node name="BG" type="ColorRect" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.24705882, 1, 1)
+
+[node name="Logo" type="TextureRect" parent="MainMenu/BG"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1484375
+anchor_top = 0.06240929
+anchor_right = 0.8515625
+anchor_bottom = 0.49782294
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_sdvdd")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="MainMenu"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3640625
+anchor_top = 0.8361111
+anchor_right = 0.6359375
+anchor_bottom = 0.9111111
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_a8paj")
+text = "PRESS [ SPACE ] TO START"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GameSelection" type="Control" parent="."]
+visible = false
+layout_mode = 2
+script = ExtResource("5_vwgyn")
+metadata/_tab_index = 1
+
+[node name="BG" type="ColorRect" parent="GameSelection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.24705882, 1, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="GameSelection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.203125
+anchor_top = 0.4722222
+anchor_right = 0.796875
+anchor_bottom = 0.5277778
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 16
+alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Testing" type="Button" parent="GameSelection/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Testing"
+
+[node name="Multiplayer" type="Button" parent="GameSelection/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Multiplayer"
+
+[node name="Options" type="Button" parent="GameSelection/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Options"
+
+[node name="Exit" type="Button" parent="GameSelection/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Exit"
+
+[node name="Title" type="Label" parent="GameSelection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3640625
+anchor_top = 0.1875
+anchor_right = 0.6359375
+anchor_bottom = 0.2625
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_a8paj")
+text = "Game Selection"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="InGame" type="Control" parent="."]
+visible = false
+layout_mode = 2
+script = ExtResource("6_a8paj")
+metadata/_tab_index = 2
+
+[node name="Pause" type="Control" parent="."]
+visible = false
+layout_mode = 2
+script = ExtResource("7_a8paj")
+metadata/_tab_index = 3
+
+[node name="Title" type="Label" parent="Pause"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.3640625
+anchor_top = 0.1875
+anchor_right = 0.6359375
+anchor_bottom = 0.2625
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("4_a8paj")
+text = "Options"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Pause"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Button" parent="Pause/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Resume"
+
+[node name="Exit" type="Button" parent="Pause/VBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+theme = ExtResource("4_a8paj")
+text = "Exit"
+
+[connection signal="pressed" from="GameSelection/HBoxContainer/Testing" to="GameSelection" method="_on_testing_pressed"]
+[connection signal="pressed" from="GameSelection/HBoxContainer/Multiplayer" to="GameSelection" method="_on_multiplayer_pressed"]
+[connection signal="pressed" from="GameSelection/HBoxContainer/Options" to="GameSelection" method="_on_options_pressed"]
+[connection signal="pressed" from="GameSelection/HBoxContainer/Exit" to="GameSelection" method="_on_exit_pressed"]
+[connection signal="pressed" from="Pause/VBoxContainer/Resume" to="Pause" method="_on_resume_pressed"]
+[connection signal="pressed" from="Pause/VBoxContainer/Exit" to="Pause" method="_on_exit_pressed"]
